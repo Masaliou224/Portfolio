@@ -1,38 +1,248 @@
-.App {
+body {
+  /* background-color: #0a192f; */
+  color: #ccd6f6;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-name {
+  display: flex;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-name img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 15px;
+}
+
+.profile-name h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.div {
+  padding: 0px;
+  margin: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.div h1 {
+  font-size: 4rem;
+}
+
+.div h2 {
+  font-size: 2rem;
+  color: #64ffda;
+}
+
+.projects {
+  text-align: center;
+}
+
+.about, .experience, .contact {
+  padding: 50px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 30px;
+}
+
+.profile {
+  width: 45%;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.skills-section {
+  width: 45%;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: #ccd6f6;
+  color: black;
+  padding: 10px;
+  border-radius: 1.2em;
+  margin: 10px;
+  font-size: 14px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* General container for the section */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  /* background-color: #0d1117; Dark background */
+}
+
+/* Project card styling */
+.project-card {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  background-color: #161b22;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 600px; /* You can adjust the width */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+}
+
+/* Placeholder for the project image */
+.project-image {
+  width: 100%;
+  height: 200px;
+  background-color: #e1e4e8; /* Placeholder color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #6a737d; /* Text color inside the placeholder */
+}
+
+/* Content container */
+.project-content {
+  padding: 20px;
+  background-color: #0d1117; /* Matches background of the page */
+}
+
+/* Project title styling */
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f0f6fc;
+  margin-bottom: 10px;
+}
+
+/* Project description */
+.project-description {
+  font-size: 16px;
+  color: #8b949e;
+  margin-bottom: 15px;
+}
+
+/* Buttons container */
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+/* Link button */
+.project-link,
+.project-badge {
+  padding: 8px 16px;
+  background-color: #21262d;
+  color: #58a6ff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.project-link:hover,
+.project-badge:hover {
+  background-color: #30363d; /* Hover effect */
+}
+
+/* Badge button styling */
+.project-badge {
+  background-color: #238636;
+  color: #f0f6fc;
+}
+
+.project-badge:hover {
+  background-color: #2ea043; /* Hover effect for badge */
+}
+
+.project-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-card:nth-child(odd) {
+  flex-direction: row;
+}
+
+.contact .social-icons a {
+  color: #64ffda;
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.social-icons {
+  width: 50px;
+  height: 50px;
+}
+
+.about-txt {
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #020c1b;
+  color: #64ffda;
 }
